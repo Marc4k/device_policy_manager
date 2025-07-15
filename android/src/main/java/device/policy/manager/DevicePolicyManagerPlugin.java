@@ -51,6 +51,7 @@ public class DevicePolicyManagerPlugin
             mActivity.startActivityForResult(intent, REQUEST_CODE_FOR_DEVICE_POLICY_MANAGER);
         } else if (call.method.equals("removeActiveAdmin")) {
             deviceManger.removeActiveAdmin(compName);
+            result.success(null);
         } else if (call.method.equals("isPermissionGranted")) {
             result.success(deviceManger.isAdminActive(compName));
         } else if (call.method.equals("isCameraDisabled")) {
